@@ -42,7 +42,7 @@ Rode os seguintes comandos:
 ```bash
 $ ./configure --enable-gcov # configura o php habilitando essa biblioteca 
 $ make
-```bash
+```
 
 Para gerar um relatório de cobertura de um teste, é necessário executar o comando
 
