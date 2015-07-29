@@ -1,1 +1,3 @@
 .vagrant/
+x64/.vagrant/
+php-src/
