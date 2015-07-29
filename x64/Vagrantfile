@@ -28,6 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     auto_correct: true
 
   config.vm.synced_folder ".", "/vagrant", type: "rsync",
+    rsync__exclude: ".git/",
     rsync__auto: true
 
   config.vm.provision "shell" do |s|
