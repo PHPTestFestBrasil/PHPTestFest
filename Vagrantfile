@@ -7,12 +7,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
   else
-    puts "_Info_: Plugin '''vagrant-cachier''' is not installed."
+    puts "_Info_: Plugin vagrant-cachier is not installed."
     puts "To install, run: vagrant plugin install vagrant-cachier"
   end
 
   unless Vagrant.has_plugin?("vagrant-rsync-back")
-    puts "_Info_: Plugin '''vagrant-rsync-back''' is not installed."
+    puts "_Info_: Plugin vagrant-rsync-back is not installed."
     puts "To install, run: vagrant plugin install vagrant-rsync-back"
   end
 
