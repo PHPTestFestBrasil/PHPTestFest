@@ -24,12 +24,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.memory = 1024
   end
 
+  config.vm.network :private_network, ip: "192.168.33.99"
+
   config.vm.network "forwarded_port", guest: 8042, host: 8042,
     auto_correct: true
 
-  config.vm.synced_folder ".", "/vagrant", type: "rsync",
-    rsync__exclude: ".git/",
-    rsync__auto: true
+  config.vm.synced_folder "./", "/vagrant", id: "vagrant-root", :nfs => true
+  #config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__auto: true
 
   config.vm.provision "shell" do |s|
     s.inline = <<SCRIPT
@@ -74,6 +75,10 @@ sudo dpkg -i libbison-dev_2.7.1.dfsg-1_amd64.deb
 sudo dpkg -i bison_2.7.1.dfsg-1_amd64.deb
 rm -rf libbison-dev_2.7.1.dfsg-1_amd64.deb
 rm -rf bison_2.7.1.dfsg-1_amd64.deb
+
+echo "**********************************************************"
+echo "All requirements were installed. You can start your tests!"
+echo "**********************************************************"
 
 SCRIPT
   end
