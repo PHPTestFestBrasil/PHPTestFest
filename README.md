@@ -57,7 +57,7 @@ para ver se o seu teste testou algo que não era testado antes.
 ##Slides
 
  - [PHPT - Ivan Rosolen (PHPSP)](http://pt.slideshare.net/ivanrosolen/phpt-13829359)
- - [PHPSP TestFest 2019 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2009)
+ - [Escrevendo testes com PHPT e contribuindo com o PHP - Rafael Dohms](http://blog.doh.ms/2009/08/19/escrevendo-testes-com-phpt/?lang=pt-br)
  - [PHPSP TestFest 2010 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2010)
  
 Fonte para geração desse repositório:
