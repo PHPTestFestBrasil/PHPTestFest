@@ -29,6 +29,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 8042, host: 8042,
     auto_correct: true
 
+  # set auto_update to false, if you do NOT want to check the correct 
+  # additions version when booting this machine
+  config.vbguest.auto_update = true
+
+  # do NOT download the iso file from a webserver
+  config.vbguest.no_remote = true
+
   config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => true
   #config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__auto: true
 

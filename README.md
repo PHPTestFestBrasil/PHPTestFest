@@ -54,6 +54,14 @@ O relatório em HTML fica disponível em lcov_html/index.html. Assim, é só com
 o seu relatório de cobertura com o [relatório do PHP QA](http://gcov.php.net/PHP_HEAD/lcov_html/index.php)
 para ver se o seu teste testou algo que não era testado antes.
 
+##Slides
+
+ - [PHPT - Ivan Rosolen (PHPSP)](http://pt.slideshare.net/ivanrosolen/phpt-13829359)
+ - [PHPSP TestFest 2019 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2009)
+ - [PHPSP TestFest 2010 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2010)
+ 
 Fonte para geração desse repositório:
-[https://gist.github.com/rogeriopradoj/68f4372483814cba62d5](https://gist.github.com/rogeriopradoj/68f4372483814cba62d5)
+
+ - [https://gist.github.com/rogeriopradoj/68f4372483814cba62d5](https://gist.github.com/rogeriopradoj/68f4372483814cba62d5)
+ - [https://github.com/mauriciovieira/PHPTestFest](https://github.com/mauriciovieira/PHPTestFest)
 
