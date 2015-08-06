@@ -51,7 +51,7 @@ echo "Installing supporting packages"
 echo "******************************"
 
 sudo apt-get -y install build-essential wget curl git vim
-sudo apt-get -y install libcurl4-gnutls-dev libreadline-dev libxml2-dev libxslt1-dev re2c libpng-dev libjpeg-dev m4 lcov
+sudo apt-get -y install libcurl4-gnutls-dev libreadline-dev libxml2-dev libxslt1-dev re2c libpng-dev libjpeg-dev m4 lcov libicu-dev
 sudo apt-get -y install sublime-text-installer
 
 echo "*********************"
