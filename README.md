@@ -28,7 +28,7 @@ Compile o PHP com os testes
 ```bash
 $ cd php-src
 $ ./buildconf
-$ ./configure --with-curl --with-gd --with-mhash --with-pdo-mysql --enable-soap --with-openssl --with-xsl --enable-bcmath --with-zlib --enable-sysvsem --with-gd --with-readline --enable-gcov --enable-phar --enable-mbstring --enable-intl
+$ ./configure --with-curl --with-gd --with-mhash --with-pdo-mysql --enable-soap --with-openssl --with-xsl --enable-bcmath --with-zlib --enable-sysvsem --with-readline --enable-gcov --enable-phar --enable-mbstring --enable-intl
 $ make
 $ make test
 ```
