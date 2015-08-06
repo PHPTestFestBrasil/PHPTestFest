@@ -52,7 +52,7 @@ $ make
 Para gerar um relatório de cobertura de um teste, é necessário executar o comando
 
 ```bash
-$ make lcov TESTS=teste/a/ser/executado
+$ make lcov TESTS=teste/a/ser/executado  ; xdg-open lcov_html/index.html
 ```
 
 O relatório em HTML fica disponível em lcov_html/index.html. Assim, é só comparar
@@ -65,7 +65,7 @@ para ver se o seu teste testou algo que não era testado antes.
  - [Escrevendo testes com PHPT e contribuindo com o PHP - Rafael Dohms](http://blog.doh.ms/2009/08/19/escrevendo-testes-com-phpt/?lang=pt-br)
  - [PHPSP TestFest 2010 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2010)
  
-Fonte para geração desse repositório:
+Fontes para geração desse repositório:
 
  - [https://gist.github.com/rogeriopradoj/68f4372483814cba62d5](https://gist.github.com/rogeriopradoj/68f4372483814cba62d5)
  - [https://github.com/mauriciovieira/PHPTestFest](https://github.com/mauriciovieira/PHPTestFest)
