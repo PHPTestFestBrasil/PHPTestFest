@@ -6,7 +6,7 @@ PHPTestFest
 Clone o repositório e inicie os submódulos
 
 ```bash
-$ git clone git@github.com:royopa/PHPTestFest.git
+$ git clone https://github.com/PHPTestFestBrasil/PHPTestFest.git
 $ git submodule init
 $ git submodule update
 ```
