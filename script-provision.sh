@@ -94,7 +94,7 @@ echo "********************************"
 git clone https://github.com/php/php-src /home/vagrant/php-src
 cd /home/vagrant/php-src
 ./buildconf
-./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-native-ttf --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-mcrypt --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --with-tidy --enable-wddx --with-xmlrpc --with-xsl --enable-zip
+./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-native-ttf --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-mcrypt --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --with-tidy --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib
 make
 
 echo "**********************************************************"
