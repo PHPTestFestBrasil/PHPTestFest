@@ -84,7 +84,7 @@ rm -rf bison_2.7.1.dfsg-1_i386.deb
 echo "************************************"
 echo "Installing other supporting packages"
 echo "************************************"
-sudo apt-get -y install libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libtidy-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev
+sudo apt-get -y install libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libtidy-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev snmp snmp-mibs-downloader
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
 
