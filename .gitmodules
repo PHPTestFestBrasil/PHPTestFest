@@ -1,3 +1,3 @@
 [submodule "php-src"]
 	path = php-src
-	url = git@github.com:royopa/php-src.git
+	url = https://github.com/php/php-src.git
