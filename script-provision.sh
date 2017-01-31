@@ -50,7 +50,7 @@ echo "******************************"
 echo "Installing supporting packages"
 echo "******************************"
 
-sudo apt-get -y install build-essential wget curl git vim
+sudo apt-get -y install build-essential wget curl git vim autoconf
 sudo apt-get -y install libcurl4-gnutls-dev libreadline-dev libxml2-dev libxslt1-dev re2c libpng-dev libjpeg-dev m4 lcov libicu-dev
 sudo apt-get -y install sublime-text-installer
 
@@ -65,10 +65,12 @@ sudo sed -i 's=:/bin:=:/bin:/sbin:/usr/sbin:=' /home/vagrant/.zshrc
 chsh vagrant -s $(which zsh);
 
 echo "****************************"
-echo "Installing php5 dev packages"
+echo "Installing php7 dev packages"
 echo "****************************"
 
-sudo apt-get -y install php5-dev php-pear
+sudo add-apt-repository -y ppa:ondrej/php
+sudo apt-get update -y
+sudo apt-get -y install php7.1
 
 echo "*********************************"
 echo "Installing bison required version"
@@ -84,18 +86,23 @@ rm -rf bison_2.7.1.dfsg-1_i386.deb
 echo "************************************"
 echo "Installing other supporting packages"
 echo "************************************"
-sudo apt-get -y install libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libtidy-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev snmp snmp-mibs-downloader
+sudo apt-get -y install libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev snmp snmp-mibs-downloader
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
+
+echo "***************************************"
+echo "Removing packages are no longer needed."
+echo "***************************************"
+sudo apt-get -y autoremove
 
 echo "********************************"
 echo "Cloning and compiling PHP source"
 echo "********************************"
-git clone https://github.com/php/php-src /home/vagrant/php-src
+sudo -u vagrant git clone https://github.com/php/php-src /home/vagrant/php-src
 cd /home/vagrant/php-src
-./buildconf
-./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-native-ttf --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-mcrypt --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --with-tidy --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib
-make
+sudo -u vagrant ./buildconf
+sudo -u vagrant ./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib
+sudo -u vagrant make
 
 echo "**********************************************************"
 echo "All requirements were installed. You can start your tests!"
