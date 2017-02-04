@@ -90,11 +90,6 @@ sudo apt-get -y install libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-d
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
 
-echo "***************************************"
-echo "Removing packages are no longer needed."
-echo "***************************************"
-sudo apt-get -y autoremove
-
 echo "********************************"
 echo "Cloning and compiling PHP source"
 echo "********************************"
