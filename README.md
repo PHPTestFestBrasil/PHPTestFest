@@ -1,7 +1,7 @@
 PHPTestFest
 ===========
 
-##Começando
+## Começando
 
 Clone o repositório e inicie os submódulos
 
@@ -10,7 +10,7 @@ $ git clone https://github.com/PHPTestFestBrasil/PHPTestFest.git
 $ cd PHPTestFest/
 ```
 
-##Requisitos
+## Requisitos
  - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  - [VirtualBox 5.0 Oracle VM VirtualBox Extension Pack](http://download.virtualbox.org/virtualbox/5.0.0/Oracle_VM_VirtualBox_Extension_Pack-5.0.0-101573.vbox-extpack)
  - [Vagrant](http://www.vagrantup.com/downloads.html)
@@ -34,7 +34,7 @@ $ make test
 
 No fim, responder com Y para mandar os relatórios
 
-##Gerando LCOV code coverage report
+## Gerando LCOV code coverage report
 
 Siga os próximos passos para gerar um relatório de cobertura de código como o 
 abaixo:
@@ -58,7 +58,7 @@ O relatório em HTML fica disponível em lcov_html/index.html. Assim, é só com
 o seu relatório de cobertura com o [relatório do PHP QA](http://gcov.php.net/PHP_HEAD/lcov_html/index.php)
 para ver se o seu teste testou algo que não era testado antes.
 
-##Slides
+## Slides
 
  - [PHPT - Ivan Rosolen (PHPSP)](http://pt.slideshare.net/ivanrosolen/phpt-13829359)
  - [Escrevendo testes com PHPT e contribuindo com o PHP - Rafael Dohms](http://blog.doh.ms/2009/08/19/escrevendo-testes-com-phpt/?lang=pt-br)
