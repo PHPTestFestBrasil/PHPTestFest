@@ -3,11 +3,12 @@ PHPTestFest
 
 ## Começando
 
-Clone o repositório e inicie os submódulos
+Clone o repositório e inicie o submódulo
 
 ```bash
 $ git clone https://github.com/PHPTestFestBrasil/PHPTestFest.git
 $ cd PHPTestFest/
+$ git submodule update --init --recursive
 ```
 
 ## Requisitos
@@ -19,6 +20,8 @@ Inicie a máquina virtual com o Vagrant
 
 ```bash
 $ vagrant plugin install vagrant-vbguest
+$ vagrant plugin install vagrant-cachier
+$ vagrant plugin install vagrant-rsync-back
 $ vagrant up
 $ vagrant ssh
 ```
@@ -64,9 +67,14 @@ para ver se o seu teste testou algo que não era testado antes.
  - [PHPT - Ivan Rosolen (PHPSP)](http://pt.slideshare.net/ivanrosolen/phpt-13829359)
  - [Escrevendo testes com PHPT e contribuindo com o PHP - Rafael Dohms](http://blog.doh.ms/2009/08/19/escrevendo-testes-com-phpt/?lang=pt-br)
  - [PHPSP TestFest 2010 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2010)
+ - [Writing Tests for PHP Source - php[tek] 2017 - Sammy Kaye Powers](https://speakerdeck.com/sammyk/writing-tests-for-php-source-php-tek-2017)
  
-Fontes para geração desse repositório:
+## Fontes para geração desse repositório:
 
  - [https://gist.github.com/rogeriopradoj/68f4372483814cba62d5](https://gist.github.com/rogeriopradoj/68f4372483814cba62d5)
  - [https://github.com/mauriciovieira/PHPTestFest](https://github.com/mauriciovieira/PHPTestFest)
+
+
+
+
 

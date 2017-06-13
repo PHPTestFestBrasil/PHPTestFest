@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "*************************"
 echo "Updating system packages"
 echo "*************************"
