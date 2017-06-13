@@ -18,6 +18,7 @@ $ cd PHPTestFest/
 Inicie a máquina virtual com o Vagrant
 
 ```bash
+$ vagrant plugin install vagrant-vbguest
 $ vagrant up
 $ vagrant ssh
 ```
