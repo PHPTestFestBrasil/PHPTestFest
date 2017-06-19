@@ -40,7 +40,7 @@ sudo apt-get --purge autoremove
 echo "************************************"
 echo "Installing other supporting packages"
 echo "************************************"
-sudo apt-get -f -y install m4 bison libbison-dev libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev snmp snmp-mibs-downloader
+sudo apt-get -f -y install m4 bison libbison-dev libxml2-dev libevent-dev zlib1g-dev libbz2-dev libgmp3-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libgd2-xpm-dev libmcrypt-dev memcached libmemcached-dev libpcre3-dev libc-client-dev libkrb5-dev libsasl2-dev libmysqlclient-dev libpspell-dev libsnmp-dev libxslt-dev libtool libc-client2007e libc-client2007e-dev libenchant-dev libgmp-dev librecode-dev libmm-dev libmm14 libzip-dev snmp snmp-mibs-downloader libedit-dev
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
 
@@ -50,7 +50,7 @@ echo "********************************"
 sudo -u vagrant git clone https://github.com/php/php-src /home/vagrant/php-src
 cd /home/vagrant/php-src
 sudo -u vagrant ./buildconf
-sudo -u vagrant ./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib --with-readline
+sudo -u vagrant ./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib --with-readline --with-libedit
 sudo -u vagrant make
 
 echo "**********************************************************"
