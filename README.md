@@ -55,7 +55,7 @@ $ make
 Para gerar um relatório de cobertura de um teste, é necessário executar o comando
 
 ```bash
-$ make lcov TESTS=teste/a/ser/executado  ; xdg-open lcov_html/index.html
+$ make lcov TESTS=teste/a/ser/executado  ; xdg-open lcov-html/index.html
 ```
 
 O relatório em HTML fica disponível em lcov_html/index.html. Assim, é só comparar
