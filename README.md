@@ -31,7 +31,7 @@ Compile o PHP com os testes
 ```bash
 $ cd php-src
 $ ./buildconf
-$ ./configure --with-curl --with-gd --with-mhash --with-pdo-mysql --enable-soap --with-openssl --with-xsl --enable-bcmath --with-zlib --enable-sysvsem --with-readline --enable-gcov --enable-phar --enable-mbstring --enable-intl
+$ ./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib --with-readline
 $ make
 $ make test
 ```
