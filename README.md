@@ -62,6 +62,19 @@ O relatório em HTML fica disponível em lcov_html/index.html. Assim, é só com
 o seu relatório de cobertura com o [relatório do PHP QA](http://gcov.php.net/PHP_HEAD/lcov_html/index.php)
 para ver se o seu teste testou algo que não era testado antes.
 
+## Testando
+```bash
+$ make test TESTS=diretorio/
+```
+
+```bash
+$ make test TESTS=diretorio/*.phpt
+```
+
+```bash
+$ make test TESTS=diretorio/nome_teste.phpt
+```
+
 ## Slides
 
  - [PHPT - Ivan Rosolen (PHPSP)](http://pt.slideshare.net/ivanrosolen/phpt-13829359)
