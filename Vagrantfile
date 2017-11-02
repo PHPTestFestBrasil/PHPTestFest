@@ -87,7 +87,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if File.exists?("config/zsh-install.sh")
     config.vm.provision :shell, :inline => "echo '   > > > installing zsh.'"
     config.vm.provision :shell, :path => "config/zsh-install.sh",
-    privileged: false
+    privileged: true
   end
  
   if File.exists?("config/script-provision.sh")
