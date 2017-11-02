@@ -76,7 +76,7 @@ $ ./configure \
     --enable-zip \
     --with-zlib \
     --with-readline \
-    --with-libedit$ make
+    --with-libedit
 $ make
 ```
 
