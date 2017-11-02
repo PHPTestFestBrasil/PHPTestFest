@@ -74,12 +74,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   if File.exists?("config/increase-swap.sh")
     config.vm.provision :shell, :inline => "echo '   > > > running local increase-swap.sh to ensure enough memory is available, via a swap file.'"
-    config.vm.provision :shell, :path => "config/increase-swap.sh"
+    config.vm.provision :shell, :path => "config/increase-swap.sh",
+    privileged: true
   end
 
   if File.exists?("config/config-locale.sh")
     config.vm.provision :shell, :inline => "echo '   > > > config-locale.'"
-    config.vm.provision :shell, :path => "config/config-locale.sh"
+    config.vm.provision :shell, :path => "config/config-locale.sh",
+    privileged: true
   end
 
   if File.exists?("config/zsh-install.sh")
@@ -90,7 +92,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
  
   if File.exists?("config/script-provision.sh")
     config.vm.provision :shell, :inline => "echo '   > > > script-provision.sh.'"
-    config.vm.provision :shell, :path => "config/script-provision.sh"
+    config.vm.provision :shell, :path => "config/script-provision.sh",
+    privileged: true
   end
 
   if File.exists?("config/php_clone_and_compile.sh")

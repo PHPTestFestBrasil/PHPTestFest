@@ -6,15 +6,19 @@ PHPTestFest - Virtual Machine
 Clone o repositório e inicie o submódulo
 
 ```bash
-$ git clone https://github.com/PHPTestFestBrasil/PHPTestFest.git
-$ cd PHPTestFest/
-$ git submodule update --init --recursive
+$ git clone https://github.com/PHPTestFestBrasil/vagrant-phptt.git
+$ cd vagrant-phptt
+$ ./start
 ```
+
+Pronto! Após alguns minutos, a máquina virtual estará completamente montada para utilização.
 
 ## Requisitos
  - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  - [VirtualBox Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
  - [Vagrant](http://www.vagrantup.com/downloads.html)
+
+## Processo não automatizado para iniciar a VM
 
 Inicie a máquina virtual com o Vagrant
 
@@ -27,7 +31,9 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-Compile o PHP com os testes
+## Compilando o PHP e rodando os testes
+
+Compile o PHP com os comandos abaixo:
 
 ```bash
 $ cd php-src
@@ -71,10 +77,16 @@ $ ./configure \
     --with-zlib \
     --with-readline \
     --with-libedit$ make
+$ make
+```
+
+E então execute os testes com o comando abaixo:
+
+```bash
 $ make test
 ```
 
-No fim, responder com Y para mandar os relatórios
+No final do processo (que demora alguns minutos), responda com Y para que o resultado dos testes seja enviado para o site do PHPQA.
 
 ## Gerando LCOV code coverage report
 
