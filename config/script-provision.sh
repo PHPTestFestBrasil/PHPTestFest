@@ -4,9 +4,9 @@ echo "******************************"
 echo "Installing supporting packages"
 echo "******************************"
 
-sudo apt-get update -y
+apt-get update -y
 
-sudo apt-get -y --force-yes install \
+apt-get -y --force-yes install \
 	build-essential \
 	wget \
 	curl \
@@ -35,7 +35,7 @@ sudo apt-get -y --force-yes install \
 echo "************************************"
 echo "Installing other supporting packages"
 echo "************************************"
-sudo apt-get -y --force-yes install \
+apt-get -y --force-yes install \
     bison \
     snmp \
     libbison-dev \
@@ -72,5 +72,5 @@ sudo apt-get -y --force-yes install \
     libzip-dev \
     libedit-dev
 
-sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
-sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
+ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
+ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
