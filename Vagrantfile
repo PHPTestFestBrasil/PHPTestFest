@@ -84,7 +84,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   if File.exists?("config/zsh-install.sh")
     config.vm.provision :shell, :inline => "echo '   > > > installing zsh.'"
-    config.vm.provision :shell, :path => "config/zsh-install.sh"
+    config.vm.provision :shell, :path => "config/zsh-install.sh",
+    privileged: false
   end
  
   if File.exists?("config/script-provision.sh")
@@ -94,7 +95,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   if File.exists?("config/php_clone_and_compile.sh")
     config.vm.provision :shell, :inline => "echo '   > > > PHP clone and compile.'"
-    config.vm.provision :shell, :path => "config/php_clone_and_compile.sh"
+    config.vm.provision :shell, :path => "config/php_clone_and_compile.sh",
+    privileged: false
   end
 
 end

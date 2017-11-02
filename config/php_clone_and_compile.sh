@@ -4,11 +4,11 @@ echo "********************************"
 echo "Cloning and compiling PHP source"
 echo "********************************"
 
-git clone https://github.com/php/php-src "$HOME"/php-src
-cd "$HOME"/php-src
-sudo -u "$USER" ./buildconf
+git clone https://github.com/php/php-src /home/vagrant/php-src
+cd /home/vagrant/php-src
+sudo -u vagrant ./buildconf
 
-sudo -u "$USER" ./configure \
+sudo -u vagrant ./configure \
     --enable-gcov \
     --enable-debug \
     --enable-sigchild \
@@ -48,7 +48,7 @@ sudo -u "$USER" ./configure \
     --with-readline \
     --with-libedit
 
-sudo -u "$USER" make
+sudo -u vagrant make
 
 echo "**********************************************************"
 echo "All requirements were installed. You can start your tests!"
