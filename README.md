@@ -1,5 +1,5 @@
-PHPTestFest
-===========
+PHPTestFest - Virtual Machine
+=============================
 
 ## Começando
 
@@ -22,6 +22,7 @@ Inicie a máquina virtual com o Vagrant
 $ vagrant plugin install vagrant-vbguest
 $ vagrant plugin install vagrant-cachier
 $ vagrant plugin install vagrant-rsync-back
+$ vagrant plugin install vagrant-timezone
 $ vagrant up
 $ vagrant ssh
 ```
@@ -31,8 +32,45 @@ Compile o PHP com os testes
 ```bash
 $ cd php-src
 $ ./buildconf
-$ ./configure --enable-gcov --enable-debug --enable-sigchild --enable-libgcc --with-openssl --with-kerberos --with-pcre-regex --enable-bcmath --with-bz2 --enable-calendar --with-curl --with-enchant --enable-exif --enable-ftp --with-gd --enable-gd-jis-conv --with-gettext --with-mhash --with-kerberos --with-imap-ssl --enable-intl --enable-mbstring --with-libmbfl --with-onig --with-pspell --with-recode --with-mm --enable-shmop --with-snmp --enable-soap --enable-sockets --enable-sysvsem --enable-wddx --with-xmlrpc --with-xsl --enable-zip --with-zlib --with-readline
-$ make
+$ ./configure \
+    --enable-gcov \
+    --enable-debug \
+    --enable-sigchild \
+    --enable-libgcc \
+    --with-openssl \
+    --with-kerberos \
+    --with-pcre-regex \
+    --enable-bcmath \
+    --with-bz2 \
+    --enable-calendar \
+    --with-curl \
+    --with-enchant \
+    --enable-exif \
+    --enable-ftp \
+    --with-gd \
+    --enable-gd-jis-conv \
+    --with-gettext \
+    --with-mhash \
+    --with-kerberos \
+    --with-imap-ssl \
+    --enable-intl \
+    --enable-mbstring \
+    --with-onig \
+    --with-pspell \
+    --with-recode \
+    --with-mm \
+    --enable-shmop \
+    --with-snmp \
+    --enable-soap \
+    --enable-sockets \
+    --enable-sysvsem \
+    --enable-wddx \
+    --with-xmlrpc \
+    --with-xsl \
+    --enable-zip \
+    --with-zlib \
+    --with-readline \
+    --with-libedit$ make
 $ make test
 ```
 
