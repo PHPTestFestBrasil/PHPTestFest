@@ -65,7 +65,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vbguest.no_remote = false
   end
 
-  config.vm.synced_folder ".", "/vagrant", enabled='false'
+  config.vm.synced_folder ".", "/vagrant"
   #config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => true
   #config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/", rsync__auto: true
 
