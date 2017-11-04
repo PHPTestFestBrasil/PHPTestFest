@@ -21,11 +21,11 @@ sudo apt-get -y --force-yes install \
     libxml2 \
     xz-utils \
     build-essential \
-	wget \
-	curl \
-	git \
-	vim \
-	software-properties-common \
+    wget \
+    curl \
+    git \
+    vim \
+    software-properties-common \
     locales \
     re2c \
     libgmp-dev \
@@ -39,13 +39,13 @@ sudo apt-get -y --force-yes install \
     libxpm-dev \
     libzip-dev \
     mm-common \
-	libssl-dev \
-	libreadline-dev \
-	libxslt1-dev \
-	libpng-dev \
-	libjpeg-dev \
-	m4 \
-	lcov \
+    libssl-dev \
+    libreadline-dev \
+    libxslt1-dev \
+    libpng-dev \
+    libjpeg-dev \
+    m4 \
+    lcov \
     libc-bin \
     tzdata \
     initscripts \
@@ -85,4 +85,4 @@ sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
 
 sudo apt-get -y --force-yes install \
-    libcurl4-gnutls-dev 
+    libcurl4-gnutls-dev

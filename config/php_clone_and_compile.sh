@@ -11,8 +11,12 @@ fi
 
 export gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"
 
-git clone https://github.com/php/php-src /vagrant/php-src
-cd /vagrant/php-src
+export PHP_INI_DIR=/vagrant/config/php
+if [ ! -e /home/vagrant/php-src ]; then
+    git clone https://github.com/php/php-src /home/vagrant/php-src
+fi
+
+cd /home/vagrant/php-src
 sudo -u vagrant ./buildconf
 
 sudo -u vagrant ./configure \

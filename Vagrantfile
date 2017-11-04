@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  
+
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
   else
@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.timezone.value = "UTC-3"
   else
     puts "_Info_: Plugin vagrant-timezone is not installed."
-    puts "To install, run: vagrant plugin install vagrant-timezone"    
+    puts "To install, run: vagrant plugin install vagrant-timezone"
   end
 
   # Every Vagrant virtual environment requires a box to build off of.
@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # your network.
   config.vm.network "public_network",
   auto_correct: true
-  
+
   config.vm.network "forwarded_port", guest: 80, host: 4567,
   auto_correct: true
 
@@ -55,19 +55,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
-    # set auto_update to false, if you do NOT want to check the correct 
+    # set auto_update to false, if you do NOT want to check the correct
     # additions version when booting this machine
     config.vbguest.auto_update = true
     # do NOT download the iso file from a webserver
     config.vbguest.no_remote = false
   end
 
-  #config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => true
-  #config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => true
+  #config.vm.synced_folder ".", "/vagrant", enabled='false'
   #config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/", rsync__auto: true
-  config.vm.synced_folder ".", "/vagrant", type: "nfs",
-   mount_options: ['rw', 'vers=3', 'tcp'],
-   linux__nfs_options: ['rw','no_subtree_check','all_squash','async']
+  #config.vm.synced_folder ".", "/vagrant", type: "nfs",
+  # mount_options: ['rw', 'vers=3', 'tcp'],
+  # linux__nfs_options: ['rw','no_subtree_check','all_squash','async']
 
   #------------------------
   # Provisioning Scripts
@@ -88,12 +88,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     privileged: true
   end
 
-  if File.exists?("config/zsh-install.sh")
-    config.vm.provision :shell, :inline => "echo '   > > > installing zsh.'"
-    config.vm.provision :shell, :path => "config/zsh-install.sh",
-    privileged: true
-  end
- 
   if File.exists?("config/script-provision.sh")
     config.vm.provision :shell, :inline => "echo '   > > > script-provision.sh.'"
     config.vm.provision :shell, :path => "config/script-provision.sh",
@@ -104,6 +98,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :inline => "echo '   > > > PHP clone and compile.'"
     config.vm.provision :shell, :path => "config/php_clone_and_compile.sh",
     privileged: false
+  end
+
+  if File.exists?("config/zsh-install.sh")
+    config.vm.provision :shell, :inline => "echo '   > > > installing zsh.'"
+    config.vm.provision :shell, :path => "config/zsh-install.sh",
+    privileged: true
   end
 
   if File.exists?("config/purge.sh")
