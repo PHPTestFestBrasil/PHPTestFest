@@ -41,6 +41,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Don't boot with headless mode
   vb.gui = false
 
+  config.ssh.password = "vagrant"
+  config.ssh.insert_key = false
+
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
@@ -103,12 +106,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if File.exists?("config/zsh-install.sh")
     config.vm.provision :shell, :inline => "echo '   > > > installing zsh.'"
     config.vm.provision :shell, :path => "config/zsh-install.sh",
-    privileged: true
-  end
-
-  if File.exists?("config/purge.sh")
-    config.vm.provision :shell, :inline => "echo '   > > > Cleaning VM.'"
-    config.vm.provision :shell, :path => "config/purge.sh",
     privileged: true
   end
 
