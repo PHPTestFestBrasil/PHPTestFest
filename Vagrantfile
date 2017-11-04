@@ -106,4 +106,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     privileged: false
   end
 
+  if File.exists?("config/purge.sh")
+    config.vm.provision :shell, :inline => "echo '   > > > Cleaning VM.'"
+    config.vm.provision :shell, :path => "config/purge.sh",
+    privileged: true
+  end
+
 end
