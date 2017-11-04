@@ -4,51 +4,64 @@ echo "******************************"
 echo "Installing supporting packages"
 echo "******************************"
 
-apt-get update -y
+sudo apt-get update -y
 
-apt-get -y --force-yes install \
-	build-essential \
+sudo apt-get -y --force-yes install \
+    file \
+    g++ \
+    gcc \
+    libc-dev \
+    libpcre3-dev \
+    make \
+    autoconf \
+    pkg-config \
+    re2c \
+    libedit2 \
+    libsqlite3-0 \
+    libxml2 \
+    xz-utils \
+    build-essential \
 	wget \
 	curl \
 	git \
 	vim \
-	autoconf \
 	software-properties-common \
-	mm-common \
-	libcurl4-gnutls-dev \
+    locales \
+    re2c \
+    libgmp-dev \
+    libicu-dev \
+    libtidy-dev \
+    libenchant-dev \
+    libaspell-dev \
+    libpspell-dev \
+    librecode-dev \
+    libsasl2-dev \
+    libxpm-dev \
+    libzip-dev \
+    mm-common \
+	libssl-dev \
 	libreadline-dev \
 	libxslt1-dev \
-	re2c \
 	libpng-dev \
 	libjpeg-dev \
 	m4 \
 	lcov \
-	libicu-dev \
     libc-bin \
     tzdata \
     initscripts \
     libedit2 \
     libonig2 \
-    libqdbm14
-
-
-echo "************************************"
-echo "Installing other supporting packages"
-echo "************************************"
-apt-get -y --force-yes install \
+    libqdbm14 \
     bison \
     snmp \
-    libbison-dev \
     libxml2-dev \
     libevent-dev \
     zlib1g-dev \
     libbz2-dev \
     libgmp3-dev \
     libssl-dev \
-    libcurl4-openssl-dev \
     libjpeg-dev \
     libpng-dev \
-    libxpm-dev \
     libgd2-xpm-dev \
     libmcrypt-dev \
     memcached \
@@ -56,21 +69,20 @@ apt-get -y --force-yes install \
     libpcre3-dev \
     libc-client-dev \
     libkrb5-dev \
-    libsasl2-dev \
     libmysqlclient-dev \
-    libpspell-dev \
     libsnmp-dev \
     libxslt-dev \
     libtool \
     libc-client2007e \
     libc-client2007e-dev \
-    libenchant-dev \
-    libgmp-dev \
-    librecode-dev \
     libmm-dev \
     libmm14 \
-    libzip-dev \
-    libedit-dev
+    libedit-dev \
+    libbison-dev \
+    dpkg-dev
 
-ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
-ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
+sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
+sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
+
+sudo apt-get -y --force-yes install \
+    libcurl4-gnutls-dev 

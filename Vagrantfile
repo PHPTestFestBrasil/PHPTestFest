@@ -64,6 +64,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => true
   config.vm.synced_folder ".", "/vagrant"
+  #config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/", rsync__auto: true
 
   #------------------------
   # Provisioning Scripts

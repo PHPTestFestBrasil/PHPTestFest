@@ -4,11 +4,18 @@ echo "********************************"
 echo "Cloning and compiling PHP source"
 echo "********************************"
 
-git clone https://github.com/php/php-src /home/vagrant/php-src
-cd /home/vagrant/php-src
+export PHP_INI_DIR=/vagrant/config/php
+sudo mkdir -p $PHP_INI_DIR/conf.d
+export gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"
+
+git clone https://github.com/php/php-src /vagrant/php-src
+cd /vagrant/php-src
 sudo -u vagrant ./buildconf
 
 sudo -u vagrant ./configure \
+    --build="$gnuArch" \
+    --with-config-file-path="$PHP_INI_DIR" \
+    --with-config-file-scan-dir="$PHP_INI_DIR/conf.d" \
     --enable-gcov \
     --enable-debug \
     --enable-sigchild \
@@ -50,6 +57,6 @@ sudo -u vagrant ./configure \
 
 sudo -u vagrant make
 
-echo "**********************************************************"
+echo "\n**********************************************************"
 echo "All requirements were installed. You can start your tests!"
 echo "**********************************************************"
