@@ -5,7 +5,10 @@ echo "Cloning and compiling PHP source"
 echo "********************************"
 
 export PHP_INI_DIR=/vagrant/config/php
-sudo mkdir -p $PHP_INI_DIR/conf.d
+if [ ! -f $PHP_INI_DIR/conf.d ]; then
+    sudo mkdir -p $PHP_INI_DIR/conf.d
+fi
+
 export gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"
 
 git clone https://github.com/php/php-src /vagrant/php-src
