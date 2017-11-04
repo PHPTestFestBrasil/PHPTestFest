@@ -41,8 +41,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Don't boot with headless mode
   vb.gui = false
 
-  config.ssh.password = "vagrant"
-  config.ssh.insert_key = false
+  #config.ssh.password = "vagrant"
+  #config.ssh.insert_key = false
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
