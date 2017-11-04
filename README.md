@@ -7,7 +7,13 @@ Clone o repositório e inicie o submódulo
 
 ```bash
 $ git clone https://github.com/PHPTestFestBrasil/vagrant-phptt.git
+```
+
+```bash
 $ cd vagrant-phptt
+```
+
+```bash
 $ ./start
 ```
 
@@ -24,19 +30,33 @@ Inicie a máquina virtual com o Vagrant
 
 ```bash
 $ vagrant plugin install vagrant-vbguest
+```
+
+```bash
 $ vagrant plugin install vagrant-cachier
+```
+
+```bash
 $ vagrant plugin install vagrant-rsync-back
+```
+
+```bash
 $ vagrant plugin install vagrant-timezone
 ```
 
 - **opcional**: baixar a *box* antes da primeira execução da VM (ex: pré-PHPTestFest). Normalmente não necessário porque ao iniciar a VM a box será baixada se não existir e, principalmente, se houver uma atualização de versão da box.
 
-  `$ vagrant box add debian/contrib-jessie64`
+```bash
+$ vagrant box add debian/contrib-jessie64
+```
 
 ### Iniciar e acessar a VM
 
 ```bash
 $ vagrant up
+```
+
+```bash
 $ vagrant ssh
 ```
 
@@ -46,7 +66,13 @@ Compile o PHP com os comandos abaixo:
 
 ```bash
 $ cd php-src
+```
+
+```bash
 $ ./buildconf
+```
+
+```bash
 $ ./configure \
     --enable-gcov \
     --enable-debug \
@@ -86,6 +112,9 @@ $ ./configure \
     --with-zlib \
     --with-readline \
     --with-libedit
+```
+
+```bash
 $ make
 ```
 
@@ -108,6 +137,9 @@ Rode os seguintes comandos:
 
 ```bash
 $ ./configure --enable-gcov # configura o php habilitando essa biblioteca
+```
+
+```bash
 $ make
 ```
 
