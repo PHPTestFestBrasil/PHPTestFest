@@ -18,7 +18,7 @@ Pronto! Após alguns minutos, a máquina virtual estará completamente montada p
  - [VirtualBox Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
  - [Vagrant](http://www.vagrantup.com/downloads.html)
 
-## Processo não automatizado para iniciar a VM
+### Preparação do ambiente vagrant
 
 Inicie a máquina virtual com o Vagrant
 
@@ -27,6 +27,15 @@ $ vagrant plugin install vagrant-vbguest
 $ vagrant plugin install vagrant-cachier
 $ vagrant plugin install vagrant-rsync-back
 $ vagrant plugin install vagrant-timezone
+```
+
+- **opcional**: baixar a *box* antes da primeira execução da VM (ex: pré-PHPTestFest). Normalmente não necessário porque ao iniciar a VM a box será baixada se não existir e, principalmente, se houver uma atualização de versão da box.
+
+  `$ vagrant box add debian/contrib-jessie64`
+
+### Iniciar e acessar a VM
+
+```bash
 $ vagrant up
 $ vagrant ssh
 ```
@@ -90,7 +99,7 @@ No final do processo (que demora alguns minutos), responda com Y para que o resu
 
 ## Gerando LCOV code coverage report
 
-Siga os próximos passos para gerar um relatório de cobertura de código como o 
+Siga os próximos passos para gerar um relatório de cobertura de código como o
 abaixo:
 
 ![](lcov_report.png)
@@ -98,7 +107,7 @@ abaixo:
 Rode os seguintes comandos:
 
 ```bash
-$ ./configure --enable-gcov # configura o php habilitando essa biblioteca 
+$ ./configure --enable-gcov # configura o php habilitando essa biblioteca
 $ make
 ```
 
@@ -131,13 +140,8 @@ $ make test TESTS=diretorio/nome_teste.phpt
  - [Escrevendo testes com PHPT e contribuindo com o PHP - Rafael Dohms](http://blog.doh.ms/2009/08/19/escrevendo-testes-com-phpt/?lang=pt-br)
  - [PHPSP TestFest 2010 - Rafael Dohms](http://pt.slideshare.net/rdohms/phpsp-testfest-2010)
  - [Writing Tests for PHP Source - php[tek] 2017 - Sammy Kaye Powers](https://speakerdeck.com/sammyk/writing-tests-for-php-source-php-tek-2017)
- 
+
 ## Fontes para geração desse repositório:
 
  - [https://gist.github.com/rogeriopradoj/68f4372483814cba62d5](https://gist.github.com/rogeriopradoj/68f4372483814cba62d5)
  - [https://github.com/mauriciovieira/PHPTestFest](https://github.com/mauriciovieira/PHPTestFest)
-
-
-
-
-
