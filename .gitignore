@@ -2,3 +2,5 @@
 x64/.vagrant/
 php-src/
 fonts/
+base.box
+/base_box/base.box

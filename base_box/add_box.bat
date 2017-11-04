@@ -1,0 +1,1 @@
+vagrant box add phptestfest/base.box ./base.box
