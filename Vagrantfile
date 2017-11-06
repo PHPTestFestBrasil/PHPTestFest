@@ -32,15 +32,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   # config.vm.box = "debian/contrib-jessie64"
-  config.vm.provider "virtualbox"
   config.vm.box = "phptestfest/base.box"
   config.vm.box_version = "0.0.1"
+
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  config.vm.provider "virtualbox" do |vb|
+  config.vm.provider "virtualbox"
+  
   # Don't boot with headless mode
   vb.gui = false
 
