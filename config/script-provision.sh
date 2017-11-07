@@ -79,7 +79,10 @@ sudo apt-get -y --force-yes install \
     libmm14 \
     libedit-dev \
     libbison-dev \
-    dpkg-dev
+    dpkg-dev \
+    libpq-dev \
+    postgresql
+
 
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
