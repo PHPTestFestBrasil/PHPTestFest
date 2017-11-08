@@ -27,7 +27,6 @@ sudo apt-get -y --force-yes install \
     vim \
     software-properties-common \
     locales \
-    re2c \
     libgmp-dev \
     libicu-dev \
     libtidy-dev \
@@ -49,7 +48,6 @@ sudo apt-get -y --force-yes install \
     libc-bin \
     tzdata \
     initscripts \
-    libedit2 \
     libonig2 \
     libqdbm14 \
     bison \
@@ -59,14 +57,10 @@ sudo apt-get -y --force-yes install \
     zlib1g-dev \
     libbz2-dev \
     libgmp3-dev \
-    libssl-dev \
-    libjpeg-dev \
-    libpng-dev \
     libgd2-xpm-dev \
     libmcrypt-dev \
     memcached \
     libmemcached-dev \
-    libpcre3-dev \
     libc-client-dev \
     libkrb5-dev \
     libmysqlclient-dev \
@@ -81,9 +75,22 @@ sudo apt-get -y --force-yes install \
     libbison-dev \
     dpkg-dev \
     libpq-dev \
-    postgresql
+    postgresql \
+    unixODBC \
+    unixODBC-dev \
+    valgrind \
+    libdb-dev \
+    libgdm-dev \
+    libgdbm-dev \
+    libfbclient2 \
+    firebird-dev \
+    ldap-utils \
+    libldap-dev \
+    freetds-dev
 
 
+
+sudo ln -fs /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/libsybdb.so
 sudo ln -fs /usr/include/linux/igmp.h /usr/include/gmp.h
 sudo ln -fs /usr/lib/i386-linux-gnu/libldap.so /usr/lib/
 

@@ -24,43 +24,73 @@ sudo -u vagrant ./configure \
     --with-config-file-path="$PHP_INI_DIR" \
     --with-config-file-scan-dir="$PHP_INI_DIR/conf.d" \
     --enable-gcov \
-    --enable-debug \
-    --enable-sigchild \
-    --enable-libgcc \
-    --with-openssl \
-    --with-kerberos \
-    --with-pcre-regex \
-    --enable-bcmath \
+    --with-xsl \
+    --enable-wddx \
+    --with-tidy \
+    --enable-soap \
     --with-bz2 \
+    --with-imap \
+    --with-imap-ssl \
+    --with-kerberos \
+    --with-mysqli=mysqlnd \
+    --with-openssl \
+    --with-pdo-mysql=mysqlnd \
+    --with-pdo-sqlite \
+    --with-pgsql \
+    --with-pdo-pgsql \
+    --with-zlib \
+    --enable-bcmath \
     --enable-calendar \
-    --with-curl \
-    --with-enchant \
+    --enable-dba \
     --enable-exif \
     --enable-ftp \
     --with-gd \
-    --enable-gd-jis-conv \
-    --with-gettext \
-    --with-mhash \
-    --with-kerberos \
-    --with-imap-ssl \
-    --enable-intl \
-    --enable-mbstring \
-    --with-onig \
-    --with-pspell \
-    --with-recode \
-    --with-mm \
+    --with-gmp \
+    --enable-pcntl \
     --enable-shmop \
-    --with-snmp \
-    --enable-soap \
     --enable-sockets \
+    --enable-sysvmsg \
     --enable-sysvsem \
-    --enable-wddx \
+    --enable-sysvshm \
     --with-xmlrpc \
-    --with-xsl \
-    --enable-zip \
-    --with-zlib \
+    --with-snmp \
+    --enable-mbstring \
+    --with-gdbm \
+    --with-pdo-firebird \
+    --with-gettext \
     --with-readline \
-    --with-libedit
+    --enable-intl \
+    --with-mhash \
+    --with-unixODBC=/usr \
+    --with-pdo-odbc=unixODBC,/usr \
+    --with-pdo-dblib \
+    --with-litespeed \
+    --with-interbase \
+    --with-pcre-valgrind \
+    --enable-debug \
+    --enable-sigchild \
+    --enable-libgcc \
+    --with-pcre-regex \
+    --enable-gd-jis-conv \
+    --with-onig \
+    --with-mm \
+    --enable-zip \
+    --with-libedit \
+    --enable-phpdbg \
+    --enable-fpm \
+    --without-pear \
+    --with-jpeg-dir=/usr \
+    --with-png-dir=/usr \
+    --without-libzip \
+    --with-zlib-dir=/usr \
+    --enable-xmlreader \
+    --with-curl=/usr \
+    --with-pspell=/usr \
+    --with-enchant=/usr \
+    --with-freetype-dir=/usr \
+    --with-xpm-dir=/usr \
+    --enable-zend-test
+
 
 sudo -u vagrant make
 
