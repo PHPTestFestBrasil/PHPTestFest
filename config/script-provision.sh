@@ -4,6 +4,8 @@ echo "******************************"
 echo "Installing supporting packages"
 echo "******************************"
 
+sudo apt-get autoremove && sudo apt-get clean && sudo apt-get autoclean
+
 sudo apt-get update -y
 
 sudo apt-get -y --force-yes install \

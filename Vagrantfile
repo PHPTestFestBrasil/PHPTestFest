@@ -111,4 +111,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     privileged: true
   end
 
+  if File.exists?("config/sublime-text-install.sh")
+    config.vm.provision :shell, :inline => "echo '   > > > installing sublime text.'"
+    config.vm.provision :shell, :path => "config/sublime-text-install.sh",
+    privileged: true
+  end
+
+
 end
