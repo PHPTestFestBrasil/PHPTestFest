@@ -31,11 +31,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # Every Vagrant virtual environment requires a box to build off of.
-  # config.vm.box = "debian/contrib-jessie64"
+  config.vm.box = "debian/contrib-jessie64"
   
-  config.vm.box = "phptestfest/base.box"
-  config.vm.box_version = "0.0.2"
-
+  config.ssh.insert_key = true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -45,18 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # Don't boot with headless mode
   vb.gui = false
-
-  #config.ssh.password = "vagrant"
-  #config.ssh.insert_key = false
-
-  # Create a public network, which generally matched to bridged network.
-  # Bridged networks make the machine appear as another physical device on
-  # your network.
-  config.vm.network "public_network",
-  auto_correct: true
-
-  config.vm.network "forwarded_port", guest: 80, host: 4567,
-  auto_correct: true
 
   # Use VBoxManage to customize the VM. For example to change memory:
   vb.customize ["modifyvm", :id, "--memory", "1536"]

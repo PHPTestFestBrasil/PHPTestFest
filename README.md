@@ -47,7 +47,7 @@ $ vagrant plugin install vagrant-timezone
 - **opcional**: baixar a *box* antes da primeira execução da VM (ex: pré-PHPTestFest). Normalmente não necessário porque ao iniciar a VM a box será baixada se não existir e, principalmente, se houver uma atualização de versão da box.
 
 ```bash
-$ vagrant box add phptestfest/base.box
+$ vagrant box add debian/contrib-jessie64
 ```
 
 ### Iniciar e acessar a VM
